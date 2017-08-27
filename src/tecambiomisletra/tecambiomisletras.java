@@ -26,8 +26,22 @@ public class tecambiomisletras
         segundaCadena=Lector.nextLine();
         System.out.println("Ingrese Texto: ");   
         texto=Lector.nextLine();
-        Reemplazo(texto, primeraCadena, segundaCadena);
         
+        if(primeraCadena.length()>= 1  && segundaCadena.length()>= 0)
+        {
+            if(primeraCadena.length()==(segundaCadena.length()))
+            {
+                 Reemplazo(texto, primeraCadena, segundaCadena);
+            }
+             else
+            {
+                System.out.println("Las secuencias no tienen la misma longitud de caracteres");   
+            }
+        }
+        else
+        {
+            System.out.println("Las cadenas deben ser mayores o igual a 1 caracter ");   
+        }       
     }
     
     public boolean Contiene(String texto, String cadena1)
